@@ -34,7 +34,7 @@ html,body{
 
 a{
   text-decoration: none;
-  color: var(--text-gray)
+  color: var(--text-gray);
 }
 
 .flex-row{
@@ -71,6 +71,11 @@ h5{
   font-size: 2.5rem;
 }
 
+h6{
+  text-decoration: none;
+  color: var(--text-gray);
+}
+
 button.btn{
   border: none;
   border-radius: 2rem;
@@ -103,12 +108,17 @@ p{
 /*---------- navbar ----------*/
 
 .nav{
-  background:var(--bluesky);
+  background-image: url(../assets/background-header.PNG);
   padding: 0 2rem;
   height: 0rem;
   min-height: 10vh;
   overflow: hidden;
   transition: height 1s ease-in-out;
+  opacity: 70%;
+}
+
+.nav a {
+  color: var(--white);
 }
 
 .nav .nav-menu{
@@ -131,7 +141,7 @@ p{
 
 .nav .toggle-collapse .toggle-icons i{
   font-size: 1.4rem;
-  color: var(--text-gray);
+  color: var(--white);
 }
 
 .collapse{
@@ -149,15 +159,15 @@ p{
   position: relative;
   font-family: var(--Abel);
   font-size: 1.2rem;
-  padding-top: 2.2rem;
+  padding-top: 1.2rem;
+  margin-top: .8rem;
 }
 
-.nav .nav-items .nav-link:hover{
-  background-color:greenyellow;
-}
-
-.nav .nav-items .nav-link:hover{
-  color: white;
+.nav .nav-items .nav-link:hover {
+  background-color: skyblue;
+  border-radius: 2rem;
+  height: 20px;
+  width: auto;
 }
 
 .nav .nav-brand a{
@@ -226,6 +236,7 @@ main .blog{
   width: 100%;
   background-size: 65%;
   padding-top: 2.5rem;
+  padding-bottom: 10rem;
 }
 
 main .blog .blog-post{
@@ -334,6 +345,10 @@ main .post-content .post-title a{
   background: var(--sky);
 }
 
+.site-content .post-content .post-title .post-btn a {
+  font-size: 1.1rem;
+}
+
 .site-content .pagination{
   justify-content: center;
   color: var(--text-gray);
@@ -412,7 +427,7 @@ main .post-content .post-title a{
 
 .site-content .sidebar .newsletter .form-btn{
   border-radius: 0;
-  padding: .9rem 33%;
+  padding: .9rem 34%; 
   margin: 1rem 0;
   background: var(--sky);
 }
@@ -516,6 +531,337 @@ footer.footer .move-up span:hover{
 
 /*--------x-------- Footer ----------x-------*/
 
+/*-------------- Post Content ----------*/
+
+.post-img {
+  background-image: url(../assets/background-page.PNG);
+}
+
+.post-header {
+  width: 100%;
+  height: 1600px;
+  padding-top: .3rem ;
+}
+
+.post-container {
+  max-width: 800px;
+  margin: auto;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem !important;
+}
+
+.header-content .header-title {
+  background:var(--btnorange);
+  border-radius: 2rem;
+  height: 130px;
+}
+
+.back-home {
+  font-family: var(--Abel);
+  font-size: 1.3rem;
+}
+
+
+.header-title {
+  width: 90%;
+  font-size: 2.6rem;
+  font-family: var(--Anton);
+  color: var(--text-gray);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.header-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.post-content-pg {
+  margin-top: 14rem !important;
+  font-family: var(--Anton);
+}
+
+.post-content-pg h6 {
+  background: yellow;
+  border-radius: 2rem;
+  margin-left: 20.5rem;
+  margin-right: 46rem;
+  padding-left: 1rem;
+} 
+
+.sub-heading {
+  font-size: 2rem;
+}
+
+.post-image-pdf .post-pdf {
+  text-align: center;
+  max-width: 1300px;
+}
+
+.post-pdf {
+  object-position: center;
+  width: 940px;
+  height: 900px;
+  padding-left: 25rem;
+  margin-bottom: 5rem;
+}
+
+/*------x-------- Post Content ------x----*/
+
+/*--------------- Contact Us ----------------*/
+
+
+main .contactUs {
+  position: relative;
+  width: 100%;
+  height: 1100px;
+  margin: 0;
+  padding: 40px 100px;
+  padding-top: .3rem;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #0e3959 0%, #0e3959 30%, #03a9f5 30%, #03a9f5 100%);
+}
+
+.contactUs .title-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.contactUs .title-contact h2 {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.form {
+  grid-area: form;
+}
+
+.info {
+  grid-area: info;
+}
+
+.map {
+  grid-area: map;
+}
+
+.contacts {
+  padding: 40px;
+  background: var(--white);
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
+}
+.box {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 5fr 4fr;
+  grid-template-areas: 
+  "form info"
+  "form map";
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.contacts h3 {
+  color: #0e3959;
+  font-weight: 5000;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  font-family: var(--Lexend);
+}
+
+/*------- Form --------*/
+
+.formBox {
+  position: relative;
+  width: 100%;
+}
+
+.formBox .row50 {
+  display: flex;
+  gap: 20px;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.formBox .row100 .inputBox {
+  width: 100%;
+}
+
+.inputBox span {
+  color: #18b7ff;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 5000;
+  font-family: var(--Lexend);
+}
+
+.inputBox input {
+  padding: 10px;
+  font-size: 1.1em;
+  outline: none;
+  border: 1px solid #333;
+}
+
+.inputBox textarea {
+  padding: 10px;
+  font-size: 1.1em;
+  outline: none;
+  border: 1px solid #333;
+  resize: none;
+  min-height: 220px;
+  margin-bottom: 10px;
+}
+
+.inputBox input[type="submit"]{
+  background: #ff578b;
+  color: var(--white);
+  border: none;
+  font-size: 1.1em;
+  max-width: 120px;
+  font-weight: 5000;
+  cursor: pointer;
+  padding: 14px 15px;
+  font-family: var(--Lexend);
+}
+
+.inputBox ::placeholder {
+  color: #999;
+}
+
+/* Info */
+
+.info {
+  background: #0e3959;
+}
+
+.info h3 {
+  color: var(--white);
+}
+
+.info .infoBox div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info .infoBox div span {
+  min-width: 40px;
+  height: 40px;
+  color: var(--white);
+  background-color: #18b7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.info .infoBox div p {
+  color: var(--white);
+  font-family: var(--Lexend);
+  font-size: 1.1em;
+}
+
+.info .infoBox div a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--Lexend);
+  font-size: 1.1em;
+}
+
+.sci {
+  margin-top: 40px;
+  display: flex;
+}
+
+.sci li {
+  list-style: none;
+  margin-right: 15px;
+}
+
+.sci li a {
+  color: var(--white);
+  font-size: 2em;
+  color: #ccc;
+  margin-right: 50px;
+}
+
+.sci li a:hover {
+  color: var(--white);
+}
+
+.map {
+  padding: 0;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/*-------x-------- Contact Us ---------x-------*/
+
+
+/*     Viewport less then equal to 991px     */
+@media (max-width: 991px){
+  main {
+    background: #03a9f5;
+  }
+
+  main .contactUs {
+    height: 1900px;
+    padding: 20px;
+  }
+
+  .contactUs .box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "form"
+    "info"
+    "map";
+  }
+
+  .formBox .row50 {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+  }
+
+  .inputBox {
+    width: 100%;
+  }
+
+  .contacts {
+    padding: 30px;
+  }
+  
+  .map {
+    min-height: 300px;
+    padding: 0;
+  }
+}
+
+
+/*   x  Viewport less then equal to 991px   x  */
 
 /*     Viewport less then equal to 1130px     */
 
@@ -619,8 +965,47 @@ footer.footer .move-up span:hover{
     padding: 3.5rem 0 !important;
   }
 
+  main {
+    background: #03a9f5;
+  }
 
+  main .contactUs {
+    height: 1900px;
+    padding: 20px;
+  }
+
+  .box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "form"
+    "info"
+    "map";
+  }
+
+  .formBox .row50 {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+  }
+
+  .inputBox {
+    width: 75%;
+  }
+
+  .contacts {
+    padding: 30px;
+  }
+  
+  .map {
+    min-height: 300px;
+    padding: 0;
+  }
 }
+
+
 
 /*   x  Viewport less then equal to 425px  x   */
 
@@ -670,8 +1055,6 @@ footer.footer .move-up span:hover{
     font-size: 3.5rem ;
   }
 
-
-
 }
 
 /*   x  Viewport less then equal to 320px   x  */
@@ -684,7 +1067,6 @@ footer.footer .move-up span:hover{
   }
 
 }
-
 
 /*   x  Viewport less then equal to 1024px  x   */
 
