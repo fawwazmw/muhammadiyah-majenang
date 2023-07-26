@@ -76,32 +76,32 @@
           <!-- Form -->
           <div class="contacts form">
             <h3>Send a Message</h3>
-            <form>
+            <form action="submit.php" method="post">
               <div class="formBox">
                 <div class="row50">
                   <div class="inputBox">
                     <span>First Name</span>
-                    <input type="text" placeholder="David">
+                    <input type="text" placeholder="David" id="firstName" name="firstName">
                   </div>
                   <div class="inputBox">
                     <span>Last Name</span>
-                    <input type="text" placeholder="Ozora">
+                    <input type="text" placeholder="Ozora" id="lastName" name="lastName">
                   </div>
                 </div>
                 <div class="row50">
                   <div class="inputBox">
                     <span>Email</span>
-                    <input type="text" placeholder="david@email.com">
+                    <input type="text" placeholder="david@email.com" id="email" name="email">
                   </div>
                   <div class="inputBox">
                     <span>Mobile</span>
-                    <input type="text" placeholder="+62 812-3456-7890">
+                    <input type="text" placeholder="+62 812-3456-7890" id="number" name="number">
                   </div>
                 </div>
                 <div class="row100">
                   <div class="inputBox">
                     <span>Message</span>
-                    <textarea placeholder="Write your message here..."></textarea>
+                    <textarea placeholder="Write your message here..." id="message" name="message"></textarea>
                   </div>
                 </div>
                 <div class="row100">
