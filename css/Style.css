@@ -596,8 +596,8 @@ footer.footer .move-up span:hover{
 .post-content-pg h6 {
   background: yellow;
   border-radius: 2rem;
-  margin-left: 20.5rem;
-  margin-right: 46rem;
+  margin-left: 28rem;
+  margin-right: 49rem;
   padding-left: 1rem;
 } 
 
@@ -614,7 +614,7 @@ footer.footer .move-up span:hover{
   object-position: center;
   width: 940px;
   height: 900px;
-  padding-left: 25rem;
+  padding-left: 31rem;
   margin-bottom: 5rem;
 }
 
@@ -918,19 +918,91 @@ main .contactUs {
     object-fit: cover;
     object-position: center;
   }
+
+  .post-header {
+    height: 1350px;
+  }
+
+  .post-content-pg {
+    margin-top: 0rem!important;
+    font-family: var(--Anton);
+
+  }
   
   .post-content-pg h6 {
     background: yellow;
     border-radius: 2rem;
-    margin-left: 2.6rem;
-    margin-right: 29rem;
+    margin-left: 15rem;
+    margin-right: 21rem;
     padding-left: 1rem;
+    margin-bottom: 3rem;
   } 
+
+  .post-pdf {
+    object-position: center;
+    width: 740px;
+    height: 900px;
+    padding-left: 18rem;
+    margin-bottom: 5rem;
+  }
 
 }
 
 /*   x  Viewport less then equal to 1440px   x  */
 
+/*     Viewport less then equal to 768px     */
+
+@media only screen and (max-width: 768px){
+  
+  
+  .back-home {
+    font-size: 1rem !important;
+}
+
+  .header-content .header-title {
+    height: 100px !important;
+}
+
+  .header-title {
+    width: 60% !important;
+    font-size: 1.9rem !important;
+}
+
+  .post-header {
+    height: 1150px !important;
+  }
+
+  .post-content-pg {
+    margin-top: 0rem!important;
+    font-family: var(--Anton);
+
+  }
+  
+  .post-content-pg h6 {
+    background: yellow;
+    border-radius: 2rem !important;
+    margin-left: 2rem !important;
+    margin-right: 5rem !important;
+    padding-left: 1rem !important;
+    margin-bottom: 3rem !important;
+  } 
+
+  .sub-heading {
+    font-size: 1.8rem !important;
+}
+
+  .post-pdf {
+    object-position: center;
+    width: 600px !important;
+    height: 750px !important;
+    padding-left: 5.5rem !important;
+    margin-bottom: 5rem !important;
+  }
+
+}
+
+
+/*   x  Viewport less then equal to 768px  x   */
 
 /*     Viewport less then equal to 425px     */
 
@@ -957,6 +1029,58 @@ main .contactUs {
     color: #ccc;
     margin-right: 35px;
   }
+
+  .back-home {
+    font-size: 1rem;
+  }
+
+  .header-content .header-title {
+    height: 76px !important;
+  }
+
+  .header-title {
+    width: 65% !important;
+    font-size: 1.4rem !important;
+  }
+
+  .header-content img {
+    width:350px !important;
+    height:100% !important;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .post-header {
+    height: 900px !important;
+  }
+
+  .post-content-pg {
+    margin-top: 0rem !important;
+    font-family: var(--Anton);
+
+  }
+  
+  .post-content-pg h6 {
+    background: yellow;
+    border-radius: 2rem !important;
+    margin-left: 2rem !important;
+    margin-right: 4rem !important;
+    padding-left: 1rem !important;
+    margin-bottom: 3rem !important;
+  } 
+
+  .sub-heading {
+    font-size: 1.2rem !important;
+  }
+
+  .post-pdf {
+    object-position: center;
+    width: 300px !important;
+    height: 700px !important;
+    padding-left: 4rem !important;
+    margin-bottom: 5rem !important;
+  }
+
 
 }
 
@@ -991,6 +1115,59 @@ main .contactUs {
     color: #ccc;
     margin-right: 20px;
   }
+
+  .back-home {
+    font-size: .9rem !important;
+  }
+
+  .header-content .header-title {
+    height: 65px !important;
+  }
+
+  .header-title {
+    width: 65% !important;
+    font-size: 1.2rem !important;
+  }
+
+  .header-content img {
+    width:340px !important;
+    height:100% !important;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .post-header {
+    height: 900px !important;
+  }
+
+  .post-content-pg {
+    margin-top: 0rem !important;
+    font-family: var(--Anton);
+
+  }
+  
+  .post-content-pg h6 {
+    background: yellow;
+    border-radius: 2rem !important;
+    margin-left: 1rem !important;
+    margin-right: 4rem !important;
+    padding-left: 1rem !important;
+    margin-bottom: 3rem !important;
+  } 
+
+  .sub-heading {
+    font-size: 1.2rem !important;
+  }
+
+  .post-pdf {
+    object-position: center;
+    width: 300px !important;
+    height: 700px !important;
+    padding-left: 2.5rem !important;
+    margin-bottom: 5rem !important;
+  }
+
+
 
 
 }
@@ -1029,6 +1206,57 @@ main .contactUs {
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
+  }
+
+  .back-home {
+    font-size: .8rem !important;
+  }
+
+  .header-content .header-title {
+    height: 55px !important;
+  }
+
+  .header-title {
+    width: 65% !important;
+    font-size: 1rem !important;
+  }
+
+  .header-content img {
+    width:280px !important;
+    height:100% !important;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .post-header {
+    height: 880px !important;
+  }
+
+  .post-content-pg {
+    margin-top: 0rem !important;
+    font-family: var(--Anton);
+
+  }
+  
+  .post-content-pg h6 {
+    background: yellow;
+    border-radius: 2rem !important;
+    margin-left: 1rem !important;
+    margin-right: 3rem !important;
+    padding-left: 1rem !important;
+    margin-bottom: 3rem !important;
+  } 
+
+  .sub-heading {
+    font-size: 1rem !important;
+  }
+
+  .post-pdf {
+    object-position: center;
+    width: 250px !important;
+    height: 700px !important;
+    padding-left: 2.5rem !important;
+    margin-bottom: 5rem !important;
   }
   
 
@@ -1078,14 +1306,57 @@ main .contactUs {
     display: grid;
   }
 
+  .back-home {
+    font-size: 1.1rem;
+}
+
+  .header-content img {
+    width:700px;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .header-content .header-title {
+    height: 100px;
+}
+
+  .header-title {
+    width: 70%;
+    font-size: 2rem;
+}
+
+  .post-header {
+    height: 1150px;
+  }
+
+  .post-content-pg {
+    margin-top: 0rem!important;
+    font-family: var(--Anton);
+
+  }
+  
+  .post-content-pg h6 {
+    background: yellow;
+    border-radius: 2rem;
+    margin-left: 9rem;
+    margin-right: 14rem;
+    padding-left: 1rem;
+    margin-bottom: 3rem;
+  } 
+
+  .post-pdf {
+    object-position: center;
+    width: 600px;
+    height: 750px;
+    padding-left: 14rem;
+    margin-bottom: 5rem;
+  }
+
 
 }
 
 /*   x  Viewport less then equal to 1024px  x   */
 
 
-/*     Viewport less then equal to 768px     */
 
-
-
-/*   x  Viewport less then equal to 768px  x   */
