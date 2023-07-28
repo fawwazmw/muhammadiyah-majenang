@@ -427,7 +427,7 @@ main .post-content .post-title a{
 
 .site-content .sidebar .newsletter .form-btn{
   border-radius: 0;
-  padding: .9rem 34%; 
+  padding: .9rem 35%; 
   margin: 1rem 0;
   background: var(--sky);
 }
@@ -619,6 +619,83 @@ footer.footer .move-up span:hover{
 }
 
 /*------x-------- Post Content ------x----*/
+
+
+/*--------------- Gallery Content -----------*/
+
+.gallery-img {
+  background-image: url(../assets/background-page.PNG);
+}
+
+.gallery-header {
+  width: 100%;
+  padding-top: .3rem ;
+}
+
+.gallery-container {
+  max-width: 800px;
+  margin: auto;
+  width: 100%;
+}
+
+.gallery-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem !important;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery-content .header-gallery-title {
+  background:var(--btnorange);
+  border-radius: 2rem;
+  height: 90px;
+}
+
+.gallery-content .header-gallery-title {
+  font-size: 3.5rem;
+}
+
+.back-home {
+  font-family: var(--Abel);
+  font-size: 1.3rem;
+}
+
+.header-gallery-title {
+  width: 90%;
+  font-size: 2.6rem;
+  font-family: var(--Anton);
+  color: var(--text-gray);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.gallery-img .box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.gallery-img .box .dream {
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+  padding-bottom: 5rem;
+}
+
+.gallery-img .box .dream img {
+  width: 100%;
+  padding-bottom: 20px;
+  border-radius: 5px;
+}
+
+/*------x-------- Gallery Content ------x----*/
+
+
 
 /*--------------- Contact Us ----------------*/
 
@@ -902,6 +979,10 @@ main .contactUs {
 
 @media only screen and (max-width: 1440px){
 
+  .site-content .sidebar .newsletter .form-btn{
+    padding: .9rem 33% !important; 
+  }
+
   .header-content {
     width: 100%;
     display: flex;
@@ -953,8 +1034,15 @@ main .contactUs {
 /*     Viewport less then equal to 768px     */
 
 @media only screen and (max-width: 768px){
-  
-  
+
+  .collapse{
+    height: 38rem !important;
+  }
+
+  .site-content .sidebar .newsletter .input-element{
+    width: 65% !important;
+  }
+
   .back-home {
     font-size: 1rem !important;
 }
@@ -999,6 +1087,14 @@ main .contactUs {
     margin-bottom: 5rem !important;
   }
 
+  .gallery-img .box {
+    flex-direction: column;
+  }
+
+  .gallery-img .box .dream {
+    width: 100%;
+  }
+
 }
 
 
@@ -1021,6 +1117,10 @@ main .contactUs {
 
   body .nav .toggle-collapse .toggle-icons{
     padding: 3.5rem 0 !important;
+  }
+
+  .site-content .sidebar .newsletter .input-element{
+    width: 72% !important;
   }
 
   .sci li a {
@@ -1081,7 +1181,13 @@ main .contactUs {
     margin-bottom: 5rem !important;
   }
 
-
+  .gallery-content .header-gallery-title {
+    height: 65px !important;
+  }
+  
+  .gallery-content .header-gallery-title {
+    font-size: 2.5rem !important;
+  }
 }
 
 
@@ -1107,6 +1213,10 @@ main .contactUs {
 
   body .nav .nav-menu .nav-brand .text-gray{
     font-size: 1.8rem !important;
+  }
+
+  .site-content .sidebar .newsletter .input-element{
+    width: 75% !important;
   }
 
   .sci li a {
@@ -1167,9 +1277,13 @@ main .contactUs {
     margin-bottom: 5rem !important;
   }
 
-
-
-
+  .gallery-content .header-gallery-title {
+    height: 55px !important;
+  }
+  
+  .gallery-content .header-gallery-title {
+    font-size: 2rem !important;
+  }
 }
 
 /*   x  Viewport less then equal to 375px   x  */
@@ -1192,6 +1306,10 @@ main .contactUs {
 
   main .site-title h1{
     font-size: 3.5rem ;
+  }
+
+  .site-content .sidebar .newsletter .input-element{
+    width: 79% !important;
   }
 
   .sci li a {
