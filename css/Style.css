@@ -620,6 +620,89 @@ footer.footer .move-up span:hover{
 
 /*------x-------- Post Content ------x----*/
 
+/*-------------- Post Content 2----------*/
+
+.post-header-2 {
+  width: 100%;
+  padding-top: .3rem ;
+}
+
+.post-container-2 {
+  max-width: 800px;
+  margin: auto;
+  width: 100%;
+}
+
+.header-content-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem !important;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header-content-2 img {
+  width: 130%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header-content-2 .header-title-2 {
+  background:var(--btnorange);
+  border-radius: 2rem;
+  height: 110px;
+}
+
+.back-home-2 {
+  font-family: var(--Abel);
+  font-size: 1.3rem;
+}
+
+.header-title-2 {
+  width: 90%;
+  font-size: 2.2rem;
+  font-family: var(--Anton);
+  color: var(--text-gray);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.post-content-pg-2 {
+  font-family: var(--Anton);
+  padding-top: 1rem ;
+}
+
+.post-content-pg-2 h6 {
+  background: yellow;
+  border-radius: 2rem;
+  margin-left: 28rem;
+  margin-right: 49rem;
+  padding-left: 1rem;
+} 
+
+.sub-heading-2 {
+  font-size: 2rem;
+}
+
+.post-image-pdf-2 .post-pdf-2 {
+  text-align: center;
+  max-width: 1300px;
+}
+
+.post-pdf-2 {
+  object-position: center;
+  width: 940px;
+  height: 900px;
+  padding-left: 31rem;
+  margin-bottom: 5rem;
+}
+
+
+
+/*-------x------ Post Content 2------x---*/
+
 
 /*--------------- Gallery Content -----------*/
 
@@ -1027,6 +1110,36 @@ main .contactUs {
     margin-bottom: 5rem;
   }
 
+  .post-content-pg-2 {
+    font-family: var(--Anton);
+    padding-top: 1rem ;
+  }
+  
+  .post-content-pg-2 h6 {
+    background: yellow;
+    border-radius: 2rem;
+    margin-left: 13rem;
+    margin-right: 25rem;
+    padding-left: 1rem;
+  } 
+  
+  .sub-heading-2 {
+    font-size: 2rem;
+  }
+  
+  .post-image-pdf-2 .post-pdf-2 {
+    text-align: center;
+    max-width: 1300px;
+  }
+  
+  .post-pdf-2 {
+    object-position: center;
+    width: 940px;
+    height: 900px;
+    padding-left: 15rem;
+    margin-bottom: 5rem;
+  }
+
 }
 
 /*   x  Viewport less then equal to 1440px   x  */
@@ -1080,6 +1193,46 @@ main .contactUs {
 }
 
   .post-pdf {
+    object-position: center;
+    width: 600px !important;
+    height: 750px !important;
+    padding-left: 5.5rem !important;
+    margin-bottom: 5rem !important;
+  }
+
+  .back-home-2 {
+    font-size: 1rem !important;
+}
+
+  .header-content-2 .header-title-2 {
+    height: 80px !important;
+}
+
+  .header-title-2 {
+    width: 60% !important;
+    font-size: 1.5rem !important;
+}
+
+  .post-content-pg-2 {
+    margin-top: 0rem!important;
+    font-family: var(--Anton);
+
+  }
+  
+  .post-content-pg-2 h6 {
+    background: yellow;
+    border-radius: 2rem !important;
+    margin-left: 2rem !important;
+    margin-right: 14rem !important;
+    padding-left: 1rem !important;
+    margin-bottom: 3rem !important;
+  } 
+
+  .sub-heading-2 {
+    font-size: 1.5rem !important;
+}
+
+  .post-pdf-2 {
     object-position: center;
     width: 600px !important;
     height: 750px !important;
@@ -1181,6 +1334,57 @@ main .contactUs {
     margin-bottom: 5rem !important;
   }
 
+  .back-home-2 {
+    font-size: 1rem;
+  }
+
+  .header-content-2 .header-title-2 {
+    height: 76px !important;
+  }
+
+  .header-title-2 {
+    width: 65% !important;
+    font-size: 1rem !important;
+  }
+
+  .header-content-2 img {
+    width:350px !important;
+    height:100% !important;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .post-header-2 {
+    height: 900px !important;
+  }
+
+  .post-content-pg-2 {
+    margin-top: 0rem !important;
+    font-family: var(--Anton);
+
+  }
+  
+  .post-content-pg-2 h6 {
+    background: yellow;
+    border-radius: 2rem !important;
+    margin-left: 2rem !important;
+    margin-right: 5rem !important;
+    padding-left: 1rem !important;
+    margin-bottom: 3rem !important;
+  } 
+
+  .sub-heading-2 {
+    font-size: 1rem !important;
+  }
+
+  .post-pdf-2 {
+    object-position: center;
+    width: 300px !important;
+    height: 700px !important;
+    padding-left: 4rem !important;
+    margin-bottom: 5rem !important;
+  }
+
   .gallery-content .header-gallery-title {
     height: 65px !important;
   }
@@ -1270,6 +1474,57 @@ main .contactUs {
   }
 
   .post-pdf {
+    object-position: center;
+    width: 300px !important;
+    height: 700px !important;
+    padding-left: 2.5rem !important;
+    margin-bottom: 5rem !important;
+  }
+
+  .back-home-2 {
+    font-size: .9rem !important;
+  }
+
+  .header-content-2 .header-title-2 {
+    height: 65px !important;
+  }
+
+  .header-title-2 {
+    width: 65% !important;
+    font-size: .9rem !important;
+  }
+
+  .header-content-2 img {
+    width:340px !important;
+    height:100% !important;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .post-header-2 {
+    height: 900px !important;
+  }
+
+  .post-content-pg-2 {
+    margin-top: 0rem !important;
+    font-family: var(--Anton);
+
+  }
+  
+  .post-content-pg-2 h6 {
+    background: yellow;
+    border-radius: 2rem !important;
+    margin-left: 1rem !important;
+    margin-right: 4rem !important;
+    padding-left: 1rem !important;
+    margin-bottom: 3rem !important;
+  } 
+
+  .sub-heading-2 {
+    font-size: .9rem !important;
+  }
+
+  .post-pdf-2 {
     object-position: center;
     width: 300px !important;
     height: 700px !important;
@@ -1376,6 +1631,57 @@ main .contactUs {
     padding-left: 2.5rem !important;
     margin-bottom: 5rem !important;
   }
+
+  .back-home-2 {
+    font-size: .8rem !important;
+  }
+
+  .header-content-2 .header-title-2 {
+    height: 55px !important;
+  }
+
+  .header-title-2 {
+    width: 65% !important;
+    font-size: .8rem !important;
+  }
+
+  .header-content-2 img {
+    width:280px !important;
+    height:100% !important;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .post-header-2 {
+    height: 880px !important;
+  }
+
+  .post-content-pg-2 {
+    margin-top: 0rem !important;
+    font-family: var(--Anton);
+
+  }
+  
+  .post-content-pg-2 h6 {
+    background: yellow;
+    border-radius: 2rem !important;
+    margin-left: 1rem !important;
+    margin-right: 3rem !important;
+    padding-left: 1rem !important;
+    margin-bottom: 3rem !important;
+  } 
+
+  .sub-heading-2 {
+    font-size: .8rem !important;
+  }
+
+  .post-pdf-2 {
+    object-position: center;
+    width: 250px !important;
+    height: 700px !important;
+    padding-left: 2.5rem !important;
+    margin-bottom: 5rem !important;
+  }
   
 
 }
@@ -1464,6 +1770,53 @@ main .contactUs {
   } 
 
   .post-pdf {
+    object-position: center;
+    width: 600px;
+    height: 750px;
+    padding-left: 14rem;
+    margin-bottom: 5rem;
+  }
+
+  .back-home-2 {
+    font-size: 1.1rem;
+}
+
+  .header-content-2 img {
+    width:700px;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .header-content-2 .header-title-2 {
+    height: 85px;
+  }
+
+  .header-title-2 {
+    width: 70%;
+    font-size: 1.6rem;
+}
+
+  .post-content-pg-2 {
+    margin-top: 0rem!important;
+    font-family: var(--Anton);
+
+  }
+  
+  .post-content-pg-2 h6 {
+    background: yellow;
+    border-radius: 2rem;
+    margin-left: 9rem;
+    margin-right: 14rem;
+    padding-left: 1rem;
+    margin-bottom: 3rem;
+  } 
+
+  .sub-heading-2 {
+    font-size: 1.6rem;
+  }
+
+  .post-pdf-2 {
     object-position: center;
     width: 600px;
     height: 750px;
