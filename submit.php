@@ -1,18 +1,24 @@
 <?php
 require 'connect.php';
-$firstName = $_POST['firstName'];
-$lastName = $_POST['lastName'];
-$email = $_POST['email'];
-$number = $_POST['number'];
-$message = $_POST['message'];
 
+// Mengambil data dari form yang dikirimkan menggunakan metode POST
+$firstName = mysqli_real_escape_string($conn, $_POST['firstName']);
+$lastName = mysqli_real_escape_string($conn, $_POST['lastName']);
+$email = mysqli_real_escape_string($conn, $_POST['email']);
+$number = mysqli_real_escape_string($conn, $_POST['number']);
+$message = mysqli_real_escape_string($conn, $_POST['message']);
+
+// Query SQL untuk menyisipkan data ke dalam tabel "contact"
 $query_sql = "INSERT INTO contact (firstName, lastName, email, number, message) VALUES ('$firstName', '$lastName', '$email', '$number', '$message')";
 
 if (mysqli_query($conn, $query_sql)) {
+  // Jika penyisipan data berhasil, arahkan pengguna ke "Index.html"
   header("Location: Index.html");
 } else {
-  echo
-  "
-  <script> alert('Connection Failed'); </script>
-  " . mysqli_error($conn);
+  // Jika terjadi kesalahan, tampilkan pesan kesalahan
+  echo "<script>alert('Connection Failed: " . mysqli_error($conn) . "');</script>";
 }
+
+// Tutup koneksi ke database
+mysqli_close($conn);
+?>
