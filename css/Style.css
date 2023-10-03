@@ -1238,7 +1238,7 @@ main .contactUs {
 
 @media only screen and (max-width: 425px) {
   body .nav {
-    min-height: 23vh !important;
+    min-height: 15vh !important;
   }
 
   .collapse {
@@ -1379,7 +1379,7 @@ main .contactUs {
 
 @media only screen and (max-width: 375px) {
   body .nav {
-    min-height: 23vh !important;
+    min-height: 15vh !important;
   }
 
   .collapse {
@@ -1520,7 +1520,7 @@ main .contactUs {
 
 @media only screen and (max-width: 320px) {
   body .nav {
-    min-height: 23vh !important;
+    min-height: 14vh !important;
   }
 
   .collapse {
@@ -1659,19 +1659,6 @@ main .contactUs {
 /*     Viewport less then equal to 1024px     */
 
 @media only screen and (max-width: 1024px) {
-  .nav {
-    height: 5rem !important;
-  }
-
-  .nav .nav-menu,
-  .nav .nav-items {
-    flex-direction: column !important;
-  }
-
-  .nav .toggle-collapse {
-    display: initial !important;
-  }
-
   .site-content .sidebar .newsletter .form-btn {
     padding: 0.9rem 29% !important;
   }
