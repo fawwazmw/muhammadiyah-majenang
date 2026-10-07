@@ -13,7 +13,7 @@ $query_sql = "INSERT INTO contact (firstName, lastName, email, number, message) 
 
 if (mysqli_query($conn, $query_sql)) {
   // Jika penyisipan data berhasil, arahkan pengguna ke "Index.html"
-  header("Location: Index.html");
+  header("Location: index.html");
 } else {
   // Jika terjadi kesalahan, tampilkan pesan kesalahan
   echo "<script>alert('Connection Failed: " . mysqli_error($conn) . "');</script>";
