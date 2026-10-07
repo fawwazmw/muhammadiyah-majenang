@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Star from "../components/Star.astro";
+import { gallery } from "../data/gallery";
+---
+
+<BaseLayout
+  title="Galeri"
+  description="Dokumentasi foto kegiatan Pimpinan Cabang Muhammadiyah Majenang."
+>
+  <section class="section">
+    <div class="container">
+      <div class="page-head">
+        <p class="eyebrow">Galeri</p>
+        <h1><Star size={20} /> Dokumentasi kegiatan</h1>
+        <p class="lede">
+          Foto kegiatan dan musyawarah Pimpinan Cabang Muhammadiyah Majenang.
+        </p>
+      </div>
+
+      <ul class="gallery-grid">
+        {
+          gallery.map((item) => (
+            <li class="gallery-item">
+              <Image
+                src={item.image}
+                alt={item.alt}
+                width={800}
+                height={600}
+              />
+              <figcaption>{item.caption}</figcaption>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

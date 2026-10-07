@@ -1,0 +1,79 @@
+---
+import { Image } from "astro:assets";
+import { site, nav } from "../data/site";
+import logoLandscape from "../assets/logo-landscape.png";
+
+const path = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === "/" ? path === "/" : path.startsWith(href);
+---
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="/" aria-label={`${site.name}, kembali ke beranda`}>
+      <Image
+        class="brand__logo"
+        src={logoLandscape}
+        alt="Muhammadiyah"
+        width={190}
+        height={44}
+        loading="eager"
+      />
+      <span class="brand__tag">Cabang Majenang</span>
+    </a>
+
+    <button
+      class="nav__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+    >
+      <span class="nav__toggle-icon" aria-hidden="true"></span>
+      Menu
+    </button>
+
+    <nav class="nav" id="primary-nav" data-open="false" aria-label="Navigasi utama">
+      <ul class="nav__list">
+        {
+          nav.map((item) => (
+            <li>
+              <a
+                class="nav__link"
+                href={item.href}
+                aria-current={isActive(item.href) ? "page" : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>(".nav__toggle");
+  const nav = document.getElementById("primary-nav");
+
+  const closeMenu = () => {
+    if (!toggle || !nav) return;
+    nav.dataset.open = "false";
+    toggle.setAttribute("aria-expanded", "false");
+  };
+
+  toggle?.addEventListener("click", () => {
+    if (!nav) return;
+    const open = nav.dataset.open === "true";
+    nav.dataset.open = String(!open);
+    toggle.setAttribute("aria-expanded", String(!open));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+
+  nav?.addEventListener("click", (event) => {
+    if ((event.target as HTMLElement).closest("a")) closeMenu();
+  });
+</script>

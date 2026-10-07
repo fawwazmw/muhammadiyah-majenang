@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { posts, formatDate, type Post } from "../../data/posts";
+
+export function getStaticPaths() {
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+---
+
+<BaseLayout
+  title={post.title}
+  description={post.excerpt}
+  image={post.image.src}
+>
+  <article>
+    <header class="article__header">
+      <div class="container">
+        <a class="article__back" href="/berita">&larr; Kembali ke daftar berita</a>
+        <h1 class="article__title">{post.title}</h1>
+        <p class="article__meta">
+          <span class="chip">{post.category}</span>
+          &nbsp;·&nbsp;
+          <time datetime={post.date}>{formatDate(post.date)}</time>
+        </p>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="article__hero">
+        <Image
+          src={post.image}
+          alt={post.imageAlt}
+          width={1100}
+          height={733}
+          loading="eager"
+        />
+      </div>
+    </div>
+
+    <section class="section section--tight">
+      <div class="container article__body">
+        {
+          post.body.map((paragraph, index) => (
+            <>
+              <p>{paragraph}</p>
+              {index === 0 && post.list && (
+                <ol class="prose-list">
+                  {post.list.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ol>
+              )}
+            </>
+          ))
+        }
+
+        <div class="article__doc">
+          <div class="article__doc-head">
+            <h2>{post.pdfLabel}</h2>
+            <a
+              class="btn btn--ghost btn--small"
+              href={post.pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Buka di tab baru
+            </a>
+          </div>
+          <iframe
+            class="pdf-frame"
+            src={post.pdf}
+            title={post.pdfLabel}
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

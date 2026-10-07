@@ -1,0 +1,103 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/ContactForm.astro";
+import Star from "../components/Star.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout
+  title="Kontak"
+  description="Hubungi Pimpinan Cabang Muhammadiyah Majenang melalui formulir, email, atau telepon."
+>
+  <section class="section">
+    <div class="container">
+      <div class="page-head">
+        <p class="eyebrow">Kontak</p>
+        <h1><Star size={20} /> Hubungi kami</h1>
+        <p class="lede">
+          Kirim pesan kepada pengurus atau kunjungi sekretariat Pimpinan Cabang
+          Muhammadiyah Majenang.
+        </p>
+      </div>
+
+      <div class="contact">
+        <ContactForm />
+
+        <div>
+          <div class="contact-info">
+            <h2>Informasi kontak</h2>
+            <dl class="info-list">
+              <div class="info-item">
+                <span class="info-list__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z"
+                      stroke="currentColor"
+                      stroke-width="1.6"></path>
+                    <circle
+                      cx="12"
+                      cy="10"
+                      r="2.5"
+                      stroke="currentColor"
+                      stroke-width="1.6"></circle>
+                  </svg>
+                </span>
+                <div>
+                  <dt>Alamat</dt>
+                  <dd>{site.address.line1}<br />{site.address.line2}</dd>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-list__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <rect
+                      x="3"
+                      y="5"
+                      width="18"
+                      height="14"
+                      rx="2"
+                      stroke="currentColor"
+                      stroke-width="1.6"></rect>
+                    <path
+                      d="M4 7l8 6 8-6"
+                      stroke="currentColor"
+                      stroke-width="1.6"></path>
+                  </svg>
+                </span>
+                <div>
+                  <dt>Email</dt>
+                  <dd><a href={`mailto:${site.email}`}>{site.email}</a></dd>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-list__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M5 4h3l2 5-2 1a12 12 0 006 6l1-2 5 2v3a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"
+                      stroke="currentColor"
+                      stroke-width="1.6"></path>
+                  </svg>
+                </span>
+                <div>
+                  <dt>Telepon</dt>
+                  <dd><a href={`tel:${site.phoneHref}`}>{site.phone}</a></dd>
+                </div>
+              </div>
+            </dl>
+          </div>
+
+          <div class="map">
+            <iframe
+              src={site.mapEmbed}
+              title="Peta lokasi sekretariat Muhammadiyah Majenang"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostCard from "../components/PostCard.astro";
+import Star from "../components/Star.astro";
+import { posts } from "../data/posts";
+---
+
+<BaseLayout
+  title="Berita"
+  description="Daftar berita dan dokumen kegiatan Pimpinan Cabang Muhammadiyah Majenang."
+>
+  <section class="section">
+    <div class="container">
+      <div class="page-head">
+        <p class="eyebrow">Berita</p>
+        <h1><Star size={20} /> Berita dan dokumen</h1>
+        <p class="lede">
+          Catatan resmi kegiatan, musyawarah, dan dokumen persyarikatan dari
+          Pimpinan Cabang Muhammadiyah Majenang.
+        </p>
+      </div>
+
+      <ul class="post-list">
+        {posts.map((post) => <li><PostCard post={post} /></li>)}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

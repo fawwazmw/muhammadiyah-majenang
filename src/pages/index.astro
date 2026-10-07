@@ -1,0 +1,135 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostCard from "../components/PostCard.astro";
+import Star from "../components/Star.astro";
+import { site } from "../data/site";
+import { posts } from "../data/posts";
+import { gallery } from "../data/gallery";
+import logoSquare from "../assets/logo-square.png";
+import aboutImage from "../assets/blog/post-mhd.jpeg";
+
+const featured = posts[0]!;
+const rest = posts.slice(1);
+const preview = gallery.slice(0, 3);
+---
+
+<BaseLayout>
+  <section class="hero" id="intro">
+    <div class="container hero__inner">
+      <div>
+        <p class="eyebrow hero__eyebrow">Persyarikatan Muhammadiyah</p>
+        <h1 class="hero__title">Pimpinan Cabang Muhammadiyah Majenang</h1>
+        <p class="hero__lede">
+          Berita resmi, dokumen musyawarah, dan kegiatan pendidikan serta sosial
+          persyarikatan di Kecamatan Majenang, Kabupaten Cilacap.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--onBrand" href="#berita">Baca berita terbaru</a>
+          <a class="btn btn--light" href="/galeri">Lihat galeri kegiatan</a>
+        </div>
+      </div>
+      <div class="hero__figure">
+        <Image
+          class="hero__emblem"
+          src={logoSquare}
+          alt="Lambang dan logotype Muhammadiyah"
+          width={520}
+          height={344}
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="berita">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">
+          <Star size={18} /> Berita terbaru
+        </h2>
+        <a class="btn btn--ghost btn--small" href="/berita">Semua berita</a>
+      </div>
+      <div class="posts">
+        <PostCard post={featured} feature />
+        <div class="posts__side">
+          {rest.map((post) => <PostCard post={post} />)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="container about">
+      <figure class="about__figure">
+        <Image
+          src={aboutImage}
+          alt="Kegiatan pengurus Pimpinan Cabang Muhammadiyah Majenang"
+          width={800}
+          height={600}
+        />
+      </figure>
+      <div class="about__body">
+        <p class="eyebrow">Tentang kami</p>
+        <h2 class="section__title">
+          Gerakan Islam, pendidikan, dan sosial sejak 1912
+        </h2>
+        <p>
+          Muhammadiyah secara resmi bernama Persyarikatan Muhammadiyah, sebuah
+          organisasi Islam non-pemerintah di Indonesia dan salah satu yang
+          terbesar. Gerakan ini lahir di Kauman, Yogyakarta pada 18 November
+          1912.
+        </p>
+        <p>
+          Pimpinan Cabang Muhammadiyah Majenang menjalankan kegiatan
+          persyarikatan di wilayah Kecamatan Majenang, Kabupaten Cilacap, Jawa
+          Tengah.
+        </p>
+        <dl class="facts">
+          <div class="fact">
+            <dt>Gerakan Muhammadiyah</dt>
+            <dd>1912</dd>
+          </div>
+          <div class="fact">
+            <dt>Wilayah cabang</dt>
+            <dd>Majenang</dd>
+          </div>
+          <div class="fact">
+            <dt>Kabupaten</dt>
+            <dd>Cilacap</dd>
+          </div>
+          <div class="fact">
+            <dt>Provinsi</dt>
+            <dd>Jawa Tengah</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">
+          <Star size={18} /> Galeri kegiatan
+        </h2>
+        <a class="btn btn--ghost btn--small" href="/galeri">Buka galeri</a>
+      </div>
+      <ul class="gallery-grid">
+        {
+          preview.map((item) => (
+            <li class="gallery-item">
+              <Image
+                src={item.image}
+                alt={item.alt}
+                width={600}
+                height={450}
+              />
+              <figcaption>{item.caption}</figcaption>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

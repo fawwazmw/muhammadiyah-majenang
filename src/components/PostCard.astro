@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import { formatDate } from "../data/posts";
+
+interface Props {
+  post: import("../data/posts").Post;
+  feature?: boolean;
+}
+
+const { post, feature = false } = Astro.props;
+const cardClass = feature ? "post-card post-card--feature" : "post-card";
+---
+
+<article class={cardClass}>
+  <div class="post-card__media">
+    <Image
+      src={post.image}
+      alt={post.imageAlt}
+      loading={feature ? "eager" : "lazy"}
+      width={feature ? 900 : 700}
+      height={feature ? 675 : 394}
+    />
+  </div>
+  <div class="post-card__body">
+    <div class="post-card__meta">
+      <span class="chip">{post.category}</span>
+      <time datetime={post.date}>{formatDate(post.date)}</time>
+    </div>
+    <h3 class="post-card__title">
+      <a href={`/artikel/${post.slug}`}>{post.title}</a>
+    </h3>
+    <p class="post-card__excerpt">{post.excerpt}</p>
+    <a class="post-card__cta" href={`/artikel/${post.slug}`}>
+      Baca selengkapnya<span class="visually-hidden">: {post.title}</span>
+    </a>
+  </div>
+</article>
